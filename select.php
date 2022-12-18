@@ -43,9 +43,11 @@ if ($status==false) {
    $view .="<p>";
    $view.='<a href="u_view.php?id='.$result["id"].'">';
    $view.=$result['feeling'] . ' / ' 
-   . ($result['text']). ' / ' . ($result['img']) . ' / ' 
-  
-  . h($result['date']);
+   . ($result['text']). ' / ' . ($result['img']) . ' / ' . ($result['date']);
+   $view .="</a>";
+   $view .=" ";
+   $view.='<a href="delete.php?id='.$result["id"].'">';
+   $view .="[削除]";
    $view .="</a>";
    $view .="</p>";
 
