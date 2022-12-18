@@ -33,41 +33,9 @@ if ($status==false) {
 //   //Selectデータの数だけ自動でループしてくれる
 //   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
 $row = $stmt->fetch();
-  // while ($result = $stmt->fetch(PDO:?:FETCH_ASSOC)) {
-  //   $view .= '<p>' . $result['id'] . ' : ' . h($result['food']) . ' / ' 
-  //   . h($result['weight']). ' / ' . h($result['walk']) . ' / ' 
-  //  . h($result['cdt']). ' / ' . h($result['cmt']) . ' / ' . h($result['date']).'</p>';
-// // $a = $result['id'];
-// $feeling= $result['feeling'];
-// $text = $result['text'];
-// $img = $result['img'];
-// $date= $result['date'];
-// $id= $result['id'];
-
-
-
-
-// $view.="
-// <tr>
-// <th>$date</th>
-// <th>$feeling</th> 
-// <th>$text</th>
-// <th>$img</th>
-// </tr>
-// ";
-
-// $view.='<a href="u_view.php?id='.$result["id"].'">';
-
-// echo '<pre>';
-// var_dump($view);
-// echo'</pre>';
-
-
-
 
 // //消さない
 }
-// }
 ?>
 
 
