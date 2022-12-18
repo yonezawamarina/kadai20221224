@@ -18,8 +18,8 @@
           echo $today;
          ?>     
                   
-                <p>どういう時</p>
-                <input type="text" name="feeling">
+                <p>検索</p>
+                <input type="text" name="search_feeling">
                 <!-- <p>内容</p>
                 <input type="text" name="text">
                 <p>画像貼付</p>
@@ -28,6 +28,12 @@
                 <input type="submit" class="btnsb"  value"送信">
       </form>
     <!-- フォーム↑ここまで -->
+
+
+
+
+
+
       <div class="btn">
        <button class="btnall"  onclick="location.href='select.php'">view all</button>
        <button class="btnitem"  onclick="location.href='selectsyukei1.php'">view by item</button>

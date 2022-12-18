@@ -4,6 +4,8 @@ function h($str)
   return htmlspecialchars($str, ENT_QUOTES);//dbの中に入ることは問題なくHTMLで表示されるのを防ぐためにやる
 }
 
+
+
 //2. DB接続のおまじない
 try {
   //ID:'root', Password: xamppは 空白 ''

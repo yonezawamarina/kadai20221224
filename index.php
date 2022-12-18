@@ -35,10 +35,10 @@
                 <input type="submit" class="btnsb"  value"送信">
       </form>
     <!-- フォーム↑ここまで -->
-      <div class="btn">
+      <!-- <div class="btn">
        <button class="btnall"  onclick="location.href='select.php'">view all</button>
        <button class="btnitem"  onclick="location.href='selectsyukei1.php'">view by item</button>
-       </div>
+       </div> -->
 </div>
 
 
