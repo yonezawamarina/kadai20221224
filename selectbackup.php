@@ -1,10 +1,10 @@
 <?php
-// $search_feeling = $_POST['search_feeling'];
-
 function h($str)
 {
   return htmlspecialchars($str, ENT_QUOTES);//dbの中に入ることは問題なくHTMLで表示されるのを防ぐためにやる
 }
+
+
 
 //2. DB接続のおまじない
 try {
@@ -14,16 +14,10 @@ try {
   exit('DBConnectError:'.$e->getMessage());
 }
 
-// echo '<pre>';
-// var_dump($pdo);
-// echo'</pre>';
-
 
 //２．データ取得SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_cm_table WHERE feeling LIKE '%" . $_POST["search_feeling"] . "%' ");
+$stmt = $pdo->prepare("SELECT * FROM gs_cm_table;");
 $status = $stmt->execute();
-
-
 
 //３．データ表示
 $view="";
@@ -43,28 +37,33 @@ if ($status==false) {
    
   //  . h($result['cdt']). ' / ' . h($result['cmt']) . ' / ' . h($result['date']).'</p>';
 // $a = $result['id'];
-// $feeling= $result['feeling'];
+$feeling= $result['feeling'];
 $text = $result['text'];
-// $img = $result['img'];
-// $date= $result['date'];
+$img = $result['img'];
+$date= $result['date'];
+// $id= $result['id'];
 
 
 
 $view.="
 <tr>
+<th>$date</th>
+<th>$feeling</th> 
 <th>$text</th>
+<th>$img</th>
 </tr>
 ";
 
 
-// $view.="
-// <tr>
-// <th>$date</th>
-// <th>$feeling</th> 
-// <th>$text</th>
-// <th>$img</th>
-// </tr>
-// ";
+
+
+// $view.='<a href="u_view.php?id='.$result["id"].'">';
+
+
+// echo '<pre>';
+// var_dump($id);
+// echo'</pre>';
+
 
 //消さない
 }
@@ -90,14 +89,13 @@ $view.="
 
 <table border="1" class="table">
     <!-- <th>id</th> -->
-    <!-- <th>日付</th> -->
-    <!-- <th>気持ち</th> -->
+    <th>日付</th>
+    <th>気持ち</th>
     <th>内容</th>
-    <!-- <th>画像</th> -->
+    <th>画像</th>
   
 <?= $view ?></table>  <!-- 26行目のview -->    
 <button class="btnall"  onclick="location.href='index.php'">top</button>
 
 </body>
 </html>
-

@@ -32,26 +32,54 @@ if ($status==false) {
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
 
   while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-  //   $view .= '<p>' . $result['id'] . ' : ' . h($result['food']) . ' / ' 
-  //   . h($result['weight']). ' / ' . h($result['walk']) . ' / ' 
+  //   $view .= '<p>' . $result['id'] . ' : ' . h($result['feeling']) . ' / ' 
+  //   . h($result['text']). ' / ' . h($result['img']) . ' / ' 
    
-  //  . h($result['cdt']). ' / ' . h($result['cmt']) . ' / ' . h($result['date']).'</p>';
+  //  . h($result['date']) .'</p>';
+
+
+
+
+   $view .="<p>";
+   $view.='<a href="u_view.php?id='.$result["id"].'">';
+   $view.=$result['feeling'] . ' / ' 
+   . ($result['text']). ' / ' . ($result['img']) . ' / ' 
+  
+  . h($result['date']);
+   $view .="</a>";
+   $view .="</p>";
+
+
 // $a = $result['id'];
-$feeling= $result['feeling'];
-$text = $result['text'];
-$img = $result['img'];
-$date= $result['date'];
+// $feeling= $result['feeling'];
+// $text = $result['text'];
+// $img = $result['img'];
+// $date= $result['date'];
+// $id= $result['id'];
 
 
+// $view.='<a href="u_view.php?id='.$result["id"].'">';
+// $view.="
+// <tr>
+// <th>$id</th>
+// <th>$date</th>
+// <th>$feeling</th> 
+// <th>$text</th>
+// <th>$img</th>
+// </tr>
+// ";
 
-$view.="
-<tr>
-<th>$date</th>
-<th>$feeling</th> 
-<th>$text</th>
-<th>$img</th>
-</tr>
-";
+// $view.="<p>";
+
+
+// $view.='<a href="u_view.php?id='.$result["id"].'">';
+// $view.=
+
+
+// echo '<pre>';
+// var_dump($id);
+// echo'</pre>';
+
 
 //消さない
 }
