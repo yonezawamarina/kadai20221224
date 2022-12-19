@@ -32,7 +32,7 @@
                 <p>画像貼付</p>
                 <input type="text" name="img">
          
-                <input type="submit" class="btnsb"  value"送信">
+                <input type="submit" class="btnsb"  value"aaaa">
       </form>
     <!-- フォーム↑ここまで -->
       <!-- <div class="btn">

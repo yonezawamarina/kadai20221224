@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/searchbox.css">
 </head>
 
 
@@ -17,14 +17,13 @@
           echo $today;
          ?>     
                   
-                <p>検索</p>
                 <input type="text" name="search_feeling">
                 <!-- <p>内容</p>
                 <input type="text" name="text">
                 <p>画像貼付</p>
                 <input type="text" name="img"> -->
 
-                <input type="submit" class="btnsb"  value"送信">
+                <input type="submit" class="btnsb"  value"array_change_key_case">
       </form>
     <!-- フォーム↑ここまで -->
 

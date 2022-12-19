@@ -1,15 +1,15 @@
-
-
 <?php
-// $search_feeling = $_POST['search_feeling'];
-
+$search_feeling = $_POST['search_feeling'];
+// echo '<pre>';
+// var_dump($search_feeling);
+// echo'</pre>';
 
 function h($str)
 {
   return htmlspecialchars($str, ENT_QUOTES);//dbの中に入ることは問題なくHTMLで表示されるのを防ぐためにやる
 }
 
-//2. DB接続のおまじない
+//DB接続のおまじない
 try {
   //ID:'root', Password: xamppは 空白 ''
   $pdo = new PDO('mysql:dbname=kadai_20221224;charset=utf8;host=localhost', 'root', '');
@@ -17,18 +17,17 @@ try {
   exit('DBConnectError:'.$e->getMessage());
 }
 
-// echo '<pre>';
-// var_dump($pdo);
-// echo'</pre>';
 
 
-//２．データ取得SQL作成
+
+//データ取得SQL作成
 $stmt = $pdo->prepare("SELECT * FROM gs_cm_table WHERE feeling LIKE '%" . $_POST["search_feeling"] . "%' ");
 $status = $stmt->execute();
 
 
 
-//３．データ表示
+
+//データ表示
 $view="";
 if ($status==false) {
     //execute（SQL実行時にエラーがある場合）
@@ -90,20 +89,22 @@ $view.="
 <header>
   <!-- <a class="navbar-brand" href="index.php">データ登録</a> -->
 </header>
-
-<table border="1" class="table">
-    <!-- <th>id</th> -->
-    <!-- <th>日付</th> -->
-    <!-- <th>気持ち</th> -->
-    <th>内容</th>
-    <!-- <th>画像</th> -->
-  
-<?= $view ?></table>  <!-- 26行目のview -->    
-<button class="btn-border"  onclick="location.href='select.php'">一覧</button>
-<button class="btn-border"  onclick="location.href='top.php'">TOP</button>
-<button class="btn-border"  onclick="location.href='index.php'">入力</button>
-<button class="btn-border"  onclick="location.href='searchbox.php'">検索</button>
-
+   <div class="a">
+    <table border="1" class="table" width=500px>
+        <!-- <th>id</th> -->
+        <!-- <th>日付</th> -->
+        <!-- <th>気持ち</th> -->
+        <th>内容</th>
+        <!-- <th>画像</th> -->
+      
+    <?= $view ?></table>  <!-- 26行目のview -->    
+  </div>
+    <div class="b">
+        <button class="btn-border"  onclick="location.href='select.php'">一覧</button>
+        <button class="btn-border"  onclick="location.href='top.php'">TOP</button>
+        <button class="btn-border"  onclick="location.href='index.php'">入力</button>
+        <button class="btn-border"  onclick="location.href='searchbox.php'">検索</button>
+    </div>
 </body>
 </html>
 
