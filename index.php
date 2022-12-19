@@ -11,8 +11,6 @@
 <head>
 <link rel="stylesheet" href="./css/index.css">
 </head>
-
-
 <body>
 <div id="whole">
 
@@ -41,7 +39,11 @@
        <button class="btnall"  onclick="location.href='select.php'">view all</button>
        <button class="btnitem"  onclick="location.href='selectsyukei1.php'">view by item</button>
        </div> -->
-</div>
+  
+       <button class="btn-border"  onclick="location.href='top.php'">TOP</button>
+       <button class="btn-border"  onclick="location.href='searchbox.php'">検索</button>
+       <button class="btn-border"  onclick="location.href='select.php'">一覧</button>
+       </div>
 
 
 

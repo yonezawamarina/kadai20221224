@@ -9,7 +9,6 @@
 
     <h1>検索</h1>
 
-
      <!-- フォームここから -->
     <form action="search.php" method="post">
 
@@ -29,14 +28,10 @@
       </form>
     <!-- フォーム↑ここまで -->
 
-
-
-
-
-
       <div class="btn">
-       <button class="btnall"  onclick="location.href='select.php'">view all</button>
-       <button class="btnitem"  onclick="location.href='selectsyukei1.php'">view by item</button>
+      <button class="btn-border"  onclick="location.href='top.php'">TOP</button>
+      <button class="btn-border"  onclick="location.href='index.php'">入力</button>
+      <button class="btn-border"  onclick="location.href='select.php'">一覧</button>
        </div>
 </div>
 

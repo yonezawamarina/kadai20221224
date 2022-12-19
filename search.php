@@ -1,5 +1,8 @@
+
+
 <?php
 // $search_feeling = $_POST['search_feeling'];
+
 
 function h($str)
 {
@@ -79,7 +82,7 @@ $view.="
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>表示</title>
-<link rel="stylesheet" href="./css/select.css">
+<link rel="stylesheet" href="./css/search.css">
 <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 <body id="main">
@@ -96,7 +99,10 @@ $view.="
     <!-- <th>画像</th> -->
   
 <?= $view ?></table>  <!-- 26行目のview -->    
-<button class="btnall"  onclick="location.href='index.php'">top</button>
+<button class="btn-border"  onclick="location.href='select.php'">一覧</button>
+<button class="btn-border"  onclick="location.href='top.php'">TOP</button>
+<button class="btn-border"  onclick="location.href='index.php'">入力</button>
+<button class="btn-border"  onclick="location.href='searchbox.php'">検索</button>
 
 </body>
 </html>

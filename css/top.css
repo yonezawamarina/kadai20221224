@@ -1,0 +1,75 @@
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+
+
+
+
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url(../img/gift2.jpg);
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+
+.btn-border {
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: gray;
+  width: 100px;
+  height: 50px;
+  margin-right: 100px;
+}
+
+.btn-border:hover {
+  color: gray;
+  background: #fff;
+  border: 2px solid gray
+}
+
+/* .btnwrapper{
+  text-align: center;
+} */
+
+
+/* ぼかしから出現 */
+.btn-border{
+	animation-name:blurAnime;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(100px);
+	transform: scale(1.02);
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+  }
+}

@@ -1,3 +1,4 @@
+
 body{
   background-image:url(../img/gift.jpg);
   background-color: rgba(255,255,255,0.5);
@@ -8,6 +9,8 @@ body{
   align-items: center;
   margin-right: 0;
 }
+
+
 .btn-border {
   color: #fff;
   font-size: 20px;

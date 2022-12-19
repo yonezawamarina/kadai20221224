@@ -118,7 +118,9 @@ $view.="
 
   
 <?= $view ?></table>  <!-- 26行目のview -->    
-<button class="btnall"  onclick="location.href='index.php'">top</button>
+<button class="btn-border"  onclick="location.href='top.php'">TOP</button>
+<button class="btn-border"  onclick="location.href='index.php'">入力</button>
+<button class="btn-border"  onclick="location.href='searchbox.php'">検索</button>
 
 </body>
 </html>
